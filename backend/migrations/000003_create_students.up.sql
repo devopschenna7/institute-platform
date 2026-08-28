@@ -1,0 +1,13 @@
+CREATE TABLE students (
+    id BIGSERIAL PRIMARY KEY,
+
+    student_code VARCHAR(50) NOT NULL UNIQUE,
+
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    phone VARCHAR(20),
+    date_of_birth DATE,
+
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
